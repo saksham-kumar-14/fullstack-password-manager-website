@@ -7,7 +7,7 @@ const bcrypt = require("bcrypt");
 
 const userModel = require("./models/user");
 
-// connection to mongodb compass : "mongodb+srv://saksham:saksham@cluster0.1kkxc.mongodb.net/test"
+
 mongoose.connect("mongodb+srv://saksham:saksham@cluster0.1kkxc.mongodb.net/password-manager?retryWrites=true&w=majority");
 
 app.use(cors());
