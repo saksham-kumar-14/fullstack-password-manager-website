@@ -1,0 +1,121 @@
+.container{
+    margin: 2rem 20vw;
+}.heading{
+    text-decoration: underline;
+    color: rgb(39, 153, 224);
+}
+.passwordShowingDiv{
+    border: solid rgb(240,240,240) 2px;
+    border-radius: 2rem;
+    padding: 1rem 1.25rem;
+}
+.popUp{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(100,100,100);
+    opacity: 0.9;
+}
+
+.trashIcon{
+    width : 2rem;
+    cursor: pointer;
+    color: rgb(231, 108, 108);
+}
+.popupSubContainer{
+    border-radius: 1rem;
+    padding: 0.75rem;
+    background-color: rgb(40,40,40);
+    color: white;
+}
+.inputDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0.25rem;
+}
+.inputDiv input{
+    font-size: 1.1rem;
+    padding: 0.25rem 0.35rem;
+    border-radius: 0.5rem;
+    border: solid white 2px;
+    background-color: rgb(40,40,40);
+    color: white;
+}.inputDiv input:focus{
+    border: solid rgb(68, 174, 240) 2px;
+}
+
+.secretKeySubmitBtn{
+    width: 100%;
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    background-color: rgb(68, 174, 240);
+    font-size : 1.1rem;
+    color: white;
+    border: none;
+    transition: 400ms;
+}.secretKeySubmitBtn:hover{
+    background-color: rgb(39, 153, 224);
+}
+
+.infoDiv{
+    display: flex;
+    align-items: center;
+}
+.descDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.infoDivHeading{
+    text-decoration: underline;
+    color: rgb(39, 153, 224);
+}
+.infoDivInfo{
+    margin-left: 0.5rem;
+}
+.deleteBtn , .editBtn{
+    padding: 0.6rem 2rem;
+    border: none;
+    border-radius: 1rem;
+    margin: 0.35rem 0.6rem;
+    font-size: 1.05rem;
+    transition: 400ms;;
+}
+.deleteBtn{
+    background-color: red;
+}.deleteBtn:hover{ background-color: rgb(204, 28, 28); }
+.editBtn{
+    background-color: rgb(36, 241, 36);
+}.editBtn:hover{ background-color: rgb(33, 184, 33); }
+.homeIcon{
+    width: 2.5rem;
+    margin: 0.5rem 1.5rem;
+    cursor: pointer;
+}
+.parentContainer{
+    height: 100vh;
+}
+.parentContainerNoScroll{
+    height: 100vh;
+    overflow-y: hidden;
+}
+.parentInfoDiv{
+    padding: 0.75rem 0.3rem;
+    margin: 0.75rem 0;
+    border-top: solid rgb(240,240,240) 2px;
+    border-bottom: solid rgb(240,240,240) 2px;
+}
+.eyeIcon{
+    width: 2rem;
+    margin : 0 0.75rem;
+    cursor: pointer;
+}
+.RealInputDiv{
+    display: flex;
+    align-items: center;
+}

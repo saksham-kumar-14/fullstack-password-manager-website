@@ -1,0 +1,75 @@
+.eye_icon{
+    width: 2rem;
+    cursor: pointer;
+}
+.input_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0.6rem 0;
+}
+.password_input{
+    display: grid;
+    grid-template-columns: 85% 15%;
+    background-color: white;
+    color: black;
+}
+
+.password_input , .not_password_input{
+    border: solid black 2px;
+    border-radius: 1rem;
+    padding: 0.35rem 0.65rem;
+    margin: 0.25rem 0.5rem;
+    font-size: 1.1rem;
+}
+.password_input input{
+    border: none;
+}
+.not_password_input , .password_input{
+    width: 30vw;
+}
+.password_input div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.not_password_input:focus , .password_input:focus-within{
+    border: solid rgb(68, 174, 240) 3px;
+}
+
+
+.suggestion_div{
+    display: flex; 
+    flex-direction: column;
+}
+.suggestion_btn{
+    margin : 2rem 0.75rem;
+    border: solid black 3px;
+    border-radius: 1rem;
+    padding: 0.25rem 0;
+    font-size: 1.1rem;
+    background-color: white;
+    transition : 400ms;
+}.suggestion_btn:hover{
+    background-color: lightblue;
+    transform : scale(1.1);
+}
+.submit_btn{
+    margin: 0.5rem 1rem;
+    border: solid black 2px;
+    border-radius: 1rem;
+    padding: 0.35rem 0.5rem;
+    font-size: 1.2rem;
+    background-color: white;
+    transition: 400ms;
+}.submit_btn:hover{
+    transform: scale(1.1);
+}
+
+.parentContainer{
+    border-radius: 2rem;
+    margin: 1.25rem;
+    padding: 1.25rem;
+    border: solid rgb(231, 231, 250) 2px;
+}

@@ -1,0 +1,28 @@
+.sun_icon{
+    width: 3rem;
+    margin-left: 1rem;
+    color: orange;
+}
+
+.moon_icon{
+    width: 3rem;
+    margin-right: 1rem;
+    color: yellow;
+}
+.change_btn{
+    border-radius: 100rem;
+    padding: 1rem 1rem;
+    border: none;
+}
+.subcontainer{
+    display: flex;
+    align-items: center;
+    background-color: rgb(68, 174, 240);
+    border-radius : 4rem;
+    padding: 0.35rem;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

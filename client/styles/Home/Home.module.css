@@ -1,0 +1,70 @@
+.header{
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    padding: 1rem;
+    border-bottom: solid rgb(221, 215, 215) 0.1rem;
+}
+.auth_btn , .delete_user_btn{
+    border: none;
+    border-radius: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 1.2rem;
+    margin: 0 0.5rem;
+}
+.auth_btn{
+    background-color: lightblue;
+}
+.delete_user_btn{
+    background-color: rgb(247, 82, 82);
+}
+.auth_btn:hover, .delete_user_btn:hover{
+    transform: scale(1.1);
+}
+.auth_div{
+    position: absolute;
+    top: 0;
+}
+.pre_body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.body{
+    margin: 0.5rem 20vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.container{
+    overflow-y: scroll;
+}
+.no_scroll_container{
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.view_div{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 12rem 0;
+}
+.view_btn{
+    font-size: 1.25rem;
+    background-color: rgb(68, 174, 240);
+    border: solid black 3px;
+    padding: 0.5rem 0.6rem;
+    border-radius: 1rem;
+    transition : 400ms;
+}.view_btn:hover{
+    background-color: rgb(126, 201, 248);
+}
+
+#darkContainer{
+    background-color: rgb(40,40,40);
+    color: white;
+}
+
+#container{
+    background-color: white;
+    color: black;
+}
