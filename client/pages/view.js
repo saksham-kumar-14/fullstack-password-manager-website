@@ -30,20 +30,19 @@ const View=()=>{
     useEffect(async()=>{
         try{
             const token = decodeCookie(document.cookie);
-            const user = jwt.decode(token);
-            const res = await axios.post("http://localhost:3001/login",{
-              email : user.email,
-              password : user.password
-            })
+            const res = await axios.get("http://localhost:3001/api/login",{
+                headers: {
+                    'user-token' : token
+                }
+            });
             const data = await res.data;
-      
-            if(data.user){
+
+            if(data.userExists){
+                const user = jwt.decode(token);
                 setUserInfo(user);
-            }else{
-                setUserInfo(false);
             }
-        }catch(error){
-            console.log(error)
+        }catch{
+            alert("An error occured!")
         }
     },[])
 
