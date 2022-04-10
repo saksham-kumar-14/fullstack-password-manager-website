@@ -33,23 +33,23 @@ const Home = () => {
   useEffect(async()=>{
     try{
       const token = decodeCookie(document.cookie);
-      const user = jwt.decode(token);
-      const res = await axios.post("http://localhost:3001/login",{
-        email : user.email,
-        password : user.password
+      const res = await axios.get("http://localhost:3001/api/login",{
+        headers: {
+          'user-token' : token
+        }
       })
+      console.log(res);
       const data = await res.data;
-
-      console.log(data)
-      if(data.user){
+      if(data.userExists){
+        setLoggedin(true);
+        const user = jwt.decode(token);
         setUserInfo(user);
-        setDarkMode(user.darkMode)
-        setLoggedin(true)
+        setDarkMode(user.darkMode);
       }else{
-        setUserInfo(false);
+        setLoggedin(false);
       }
-    }catch(error){
-      console.log(error)
+    }catch{
+      setLoggedin(false);
     }
   },[])
 
