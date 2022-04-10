@@ -55,14 +55,7 @@ app.post("/login" , async (req,res)=>{
             return res.json({ status: 404 , error:"invalid email" })
         }
 
-        let isPasswordValid = await bcrypt.compare( req.body.password , user.password );
-
-        if(!isPasswordValid){
-            if(user.password === req.body.password){
-                isPasswordValid = true;
-            }
-        }
-
+        const isPasswordValid = await bcrypt.compare( req.body.password , user.password );
 
         if(isPasswordValid){
             const token = jwt.sign({
@@ -108,8 +101,23 @@ app.post("/deleteUser", async (req,res)=>{
         console.log(err);
         return res.json({ status:404 , updated:false })
     })
+})
 
+app.get("/api/login" , async(req,res)=>{
+    
+    try{
+        const token = req.headers["user-token"];
+        const decoded = jwt.verify(token, 'secret');
+        const user = await userModel.findOne({ email:decoded.email , password:decoded.password });
 
+        if(user){
+            return res.json({ status:"ok" , userExists:true })
+        }else{
+            return res.json({ status:404 , userExists:false })
+        }
+    }catch{
+        return res.json({ status:404 , userExists:false });
+    }
 })
 
 app.listen(3001,()=>{
